@@ -10,7 +10,6 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     Handler handler;
-    Runnable runnable;
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.img);
         imageView.animate().alpha(4000).setDuration(0);
+
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -27,6 +27,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
                 finish();
             }
-        },4000);
+        },2000);
     }
 }
